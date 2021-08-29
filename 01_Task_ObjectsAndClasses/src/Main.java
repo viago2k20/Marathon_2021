@@ -10,15 +10,14 @@ public class Main {
         Tiger tiger2 = new Tiger("Шерхан");
 
         Animal[] list = {houseCat, houseCat1, dog, tiger, tiger1, tiger2};
-        int runDistance;
-        int swimDistance;
 
-        System.out.println("-------");
+        System.out.println("-----");
         for (Animal animal : list) {
-            runDistance = (int) (10 + 1200 * Math.random());
-            swimDistance = (int) (5 + 100 * Math.random());
+           int runDistance = (int) (10 + 1200 * Math.random());
+           int swimDistance = (int) (5 + 100 * Math.random());
             animal.run(runDistance);
             animal.swim(swimDistance);
+            System.out.println("-----");
         }
 
         System.out.println("");

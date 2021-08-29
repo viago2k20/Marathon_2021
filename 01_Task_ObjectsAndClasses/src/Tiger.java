@@ -1,14 +1,9 @@
 public class Tiger extends  Animal{
-    private final String name;
     private static int tigerCount;
 
     public Tiger(String name){
-        this.name = name;
+        setName(name);
         tigerCount++;
-    }
-
-    public String getName(){
-        return name;
     }
 
     public static int getCount() {
@@ -34,7 +29,7 @@ public class Tiger extends  Animal{
     @Override
     public String toString() {
         return "Tiger{" +
-                "name='" + name + '\'' +
+                "name='" + getName() + '\'' +
                 '}';
     }
 }

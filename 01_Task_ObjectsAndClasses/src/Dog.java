@@ -1,15 +1,10 @@
 public class Dog extends Animal {
-    private final String name;
     private static int dogCount;
 
 
     public Dog(String name){
-        this.name = name;
+        setName(name);
         dogCount++;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public static int getCount(){
@@ -35,7 +30,7 @@ public class Dog extends Animal {
     @Override
     public String toString() {
         return "Dog{" +
-                "name='" + name + '\'' +
+                "name='" + getName() + '\'' +
                 '}';
     }
 }

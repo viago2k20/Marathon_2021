@@ -1,14 +1,13 @@
 public class HouseCat extends Animal {
-    private final String name;
     private static int catCount;
 
     public HouseCat(String name){
-        this.name = name;
+        setName(name);
         catCount++;
     }
 
-    public String getName() {
-        return name;
+    public static int getCount() {
+        return catCount;
     }
 
     @Override
@@ -24,14 +23,10 @@ public class HouseCat extends Animal {
         System.out.println("Домашние коты не плавают!");
     }
 
-    public static int getCount() {
-        return catCount;
-    }
-
     @Override
     public String toString() {
         return "HouseCat{" +
-                "name='" + name + '\'' +
+                "name='" + getName() + '\'' +
                 '}';
     }
 }
