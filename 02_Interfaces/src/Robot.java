@@ -1,4 +1,4 @@
-public class Robot implements Moves{
+public class Robot implements Activity {
     private final String name;
     private boolean status = true;
 

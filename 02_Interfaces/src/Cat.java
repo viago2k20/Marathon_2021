@@ -1,4 +1,4 @@
-public class Cat implements Moves{
+public class Cat implements Activity {
     private final String name;
     private boolean catStatus = true;
 

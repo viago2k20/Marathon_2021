@@ -1,4 +1,4 @@
 public interface Obstacle {
-    String gateName();
-    double getParameters();
+    void action(Activity p);
+
 }

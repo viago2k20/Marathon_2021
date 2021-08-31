@@ -1,4 +1,4 @@
-public class Human implements Moves {
+public class Human implements Activity {
     private final String name;
     private boolean status = true;
 
