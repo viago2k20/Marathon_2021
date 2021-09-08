@@ -4,15 +4,28 @@ public class Main {
     public static void main(String[] args) {
         String[][] strArray = {
                 {"1", "2", "3", "4"},
-                //{"з"},
                 {"5", "6", "7", "8"},
                 {"9", "10", "11", "12"},
                 {"13", "14", "15", "0"},
         };
 
+        String[][] strArray1 = {
+                {"99", "98", "e", "0"},
+                {"5", "6", "7", "8"},
+                {"9", "10", "11", "12"},
+                {"13", "14", "0", "0"},
+        };
+        String[][] strArray2 = {
+                {"1", "2", "3", "4"},
+                {"5", "6", "7"},
+                {"9", "10", "11", "12"},
+                {"13", "14", "15", "0"},
+        };
+
         try {
-            System.out.println("Hi");
             exceptionTest(strArray);
+            exceptionTest(strArray1);
+            exceptionTest(strArray2);
             System.out.println("Это сообщение отобразится когда все правильно!");
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println(e.getMessage());
@@ -24,23 +37,23 @@ public class Main {
         if (arr.length != 4) {
             throw new MyArraySizeException();
         }
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].length != 4) {
-                System.out.println(arr[i].length);
+        for (String[] value : arr) {
+            if (value.length != 4) {
                 throw new MyArraySizeException();
             }
-            for (int j = 0; j < arr[i].length; j++) {
-                }
-            }
-
+        }
+        System.out.println("Массив 4х4!");
+        int sum = 0;
         for (String[] strings : arr) {
             for (String string : strings) {
-                Scanner sc = new Scanner(String.valueOf(string));
-                while (!sc.hasNextInt()) {
+                if (!(new Scanner(string).hasNextInt())) {
                     throw new MyArrayDataException();
                 }
+                sum += Integer.parseInt(string);
             }
         }
+        System.out.println("Сумма элементов = " + sum);
+        System.out.println("*****");
     }
 }
 
