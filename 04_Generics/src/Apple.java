@@ -3,7 +3,7 @@ public class Apple extends Fruit {
     private static int count;
 
     public Apple(){
-        setName("Apple " + ++count);
+        super("Apple " + ++count);
     }
 
     @Override

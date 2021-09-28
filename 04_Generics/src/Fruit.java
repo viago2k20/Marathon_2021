@@ -1,7 +1,7 @@
 public abstract class Fruit {
-    private String name;
+    private final String name;
 
-    public void setName(String name) {
+    public Fruit(String name) {
         this.name = name;
     }
 
